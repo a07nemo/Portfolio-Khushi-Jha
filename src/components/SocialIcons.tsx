@@ -1,8 +1,7 @@
 import {
-  FaGithub,
-  FaInstagram,
+  FaEnvelope,
   FaLinkedinIn,
-  FaYoutube,
+  FaPhone,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -61,44 +60,31 @@ const SocialIcons = () => {
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
           <a
-            href="https://github.com/akashrmalhotra"
-            target="_blank"
-            rel="noreferrer"
+            href="mailto:khushijha229@gmail.com"
           >
-            <FaGithub />
+            <FaEnvelope />
           </a>
         </span>
         <span>
           <a
-            href="https://www.linkedin.com/in/akashrmalhotra/"
+            href="tel:+917669003987"
+          >
+            <FaPhone />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://www.linkedin.com/in/khushi-jha-b8a74022b"
             target="_blank"
             rel="noreferrer"
           >
             <FaLinkedinIn />
           </a>
         </span>
-        <span>
-          <a
-            href="https://www.youtube.com/@Leftbraincoder"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaYoutube />
-          </a>
-        </span>
-        <span>
-          <a
-            href="https://www.instagram.com/leftbraincoder/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram />
-          </a>
-        </span>
       </div>
       <a
         className="resume-button"
-        href="/Akash_Malhotra.pdf"
+        href="/Khushi_Jha.pdf"
         target="_blank"
         rel="noreferrer"
       >

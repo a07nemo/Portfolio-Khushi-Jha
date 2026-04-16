@@ -11,65 +11,62 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/akashrmalhotra/"
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:khushijha229@gmail.com"
                 data-cursor="disable"
               >
-                LinkedIn — akashrmalhotra
+                khushijha229@gmail.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="tel:+917669003987"
+                data-cursor="disable"
+              >
+                +91 76690 03987
               </a>
             </p>
             <h4>Education</h4>
             <p>
-              PGPWE (MBA), Indian Institute of Management, Lucknow — 2021–2023
+              B.Tech Computer Science, NIIT University — Expected Aug 2026
             </p>
             <p>
-              B.Tech Computer Science, Manav Rachna Educational Institutions —
-              2009–2013
+              Blue Bells Model School — Graduated 2022
             </p>
           </div>
           <div className="contact-box">
-            <h4>Social</h4>
+            <h4>Highlights</h4>
             <a
-              href="https://github.com/akashrmalhotra"
-              target="_blank"
-              rel="noreferrer"
+              href="#about"
               data-cursor="disable"
               className="contact-social"
             >
-              GitHub <MdArrowOutward />
+              AI Automation Intern · GroMo <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/akashrmalhotra/"
-              target="_blank"
-              rel="noreferrer"
+              href="#about"
               data-cursor="disable"
               className="contact-social"
             >
-              LinkedIn <MdArrowOutward />
+              Marketing Coordinator · Ingenuity '25 <MdArrowOutward />
             </a>
             <a
-              href="https://www.youtube.com/@Leftbraincoder"
-              target="_blank"
-              rel="noreferrer"
+              href="#about"
               data-cursor="disable"
               className="contact-social"
             >
-              YouTube <MdArrowOutward />
+              Teaching Assistant · COEET NIIT <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/leftbraincoder/"
-              target="_blank"
-              rel="noreferrer"
+              href="#about"
               data-cursor="disable"
               className="contact-social"
             >
-              Instagram <MdArrowOutward />
+              Trained Classical & Contemporary Dancer <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Akash Malhotra</span>
+              Portfolio of <br /> <span>Khushi Jha</span>
             </h2>
             <h5>
               <MdCopyright /> 2026
