@@ -61,7 +61,10 @@ const Scene = () => {
           let character = gltf.scene;
           setChar(character);
           scene.add(character);
-          headBone = character.getObjectByName("spine006") || null;
+          headBone =
+            character.getObjectByName("spine006") ||
+            character.getObjectByName("Head") ||
+            null;
           screenLight = character.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
             setTimeout(() => {

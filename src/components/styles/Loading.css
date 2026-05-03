@@ -3,7 +3,7 @@
   width: 100vw;
   height: var(--vh);
   /* background-image: linear-gradient(#cbb1ff, #d8c4ff); */
-  background-color: #e0f2f1;
+  background-color: #fce7f3;
   z-index: 999999999;
   display: flex;
   place-items: center;
@@ -13,7 +13,7 @@
 .loading-button {
   padding: 20px 50px;
   border-radius: 100px;
-  background-color: #000;
+  background-color: #ec4899;
   overflow: hidden;
   font-size: 18px;
   font-weight: 500;
@@ -52,7 +52,7 @@
   min-width: 0px;
   min-height: 0px;
   border-radius: 100px;
-  background-color: #000;
+  background-color: #ec4899;
   overflow: hidden;
   transition: 0.8s ease-in-out;
   transition-delay: 0.2s;
@@ -77,7 +77,7 @@
 }
 
 .loading-hover {
-  background-color: #2dd4bf;
+  background-color: #ec4899;
   width: 250px;
   height: 120px;
   position: absolute;
@@ -101,7 +101,7 @@
 
 .loading-content {
   position: relative;
-  background-color: #000;
+  background-color: #ec4899;
   width: 100%;
   overflow: hidden;
   transition: 0.6s;
@@ -288,7 +288,7 @@
   position: relative;
   width: 10px;
   height: 60px;
-  background-color: #000;
+  background-color: #ec4899;
   display: block;
 }
 
@@ -304,7 +304,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #2dd4bf;
+  background-color: #ec4899;
   animation: ball25 7s infinite;
   transform: translateY(10px);
   animation-timing-function: cubic-bezier(0.3, 1.18, 0.63, 1.28);

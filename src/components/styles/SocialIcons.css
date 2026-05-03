@@ -63,10 +63,10 @@
   transform: translateX(100%) rotateZ(-90deg);
 }
 .resume-button:hover {
-  color: #fff;
+  color: #ec4899;
 }
 div.resume-button span {
-  color: #fff;
+  color: #2a1a2a;
   font-size: 17px;
   margin-top: -1px;
   display: flex;

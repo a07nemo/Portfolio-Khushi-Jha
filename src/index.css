@@ -7,8 +7,8 @@
   font-style: normal;
   line-height: 1.5;
   scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: #eae5ec;
+  color-scheme: light;
+  color: #1a0e1a;
   background-color: var(--backgroundColor);
 
   font-synthesis: none;
@@ -18,8 +18,8 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #5eead4;
-  --backgroundColor: #0a0e17;
+  --accentColor: #ec4899;
+  --backgroundColor: #fef7f9;
   --vh: 100vh;
   --vh: 100svh;
 }
@@ -66,7 +66,8 @@ main {
 body {
   margin: 0;
   height: auto;
-  background-color: #050810;
+  background-color: #fef7f9;
+  color: #1a0e1a;
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;
