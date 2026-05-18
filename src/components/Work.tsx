@@ -8,14 +8,14 @@ const projects = [
     title: "GP Query Auto-Responder",
     category: "AI Email Automation · GroMo",
     tools: "n8n, Zoho Desk, GPT-4o, GroMo Internal API",
-    image: "/images/placeholder.webp",
+    image: "/images/gp-query-auto-responder.png",
     link: "#",
   },
   {
     title: "AI Document Verification",
     category: "L1 Audit Automation · GroMo",
     tools: "OpenAI Assistant API, Zoho Flow, Kotak 811 / Upstox / Tide",
-    image: "/images/placeholder.webp",
+    image: "/images/document-verification.png",
     link: "#",
   },
   {
