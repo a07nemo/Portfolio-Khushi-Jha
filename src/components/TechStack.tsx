@@ -13,11 +13,23 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
+  "/images/openai.webp",
+  "/images/claude.webp",
+  "/images/langchain.webp",
+  "/images/n8n.webp",
+  "/images/zapier.webp",
+  "/images/zoho.webp",
+  "/images/python.webp",
   "/images/javascript.webp",
+  "/images/react2.webp",
   "/images/node2.webp",
   "/images/mongo.webp",
   "/images/mysql.webp",
-  "/images/react2.webp",
+  "/images/git.webp",
+  "/images/gcp.webp",
+  "/images/hubspot.webp",
+  "/images/postman.webp",
+  "/images/splunk.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
