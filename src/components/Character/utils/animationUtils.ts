@@ -43,10 +43,37 @@ const setAnimations = (gltf: GLTF) => {
     }
 
     // Avaturn / RPM avatars come with their own idle animations whose names
-    // we don't know ahead of time. Loop any clip not already handled above.
+    // we don't know ahead of time. Loop any clip not already handled above —
+    // but strip Head/Neck and arm tracks so cursor-driven head rotation can
+    // drive those bones and the arms hang in bind pose instead of whatever
+    // gesture the idle clip authored.
+    const strippedBones = new Set([
+      "Head",
+      "Neck",
+      "mixamorig:Head",
+      "mixamorig:Neck",
+      "J_Bip_C_Head",
+      "J_Bip_C_Neck",
+      "J_Bip_L_Shoulder",
+      "J_Bip_L_UpperArm",
+      "J_Bip_L_LowerArm",
+      "J_Bip_L_Hand",
+      "J_Bip_R_Shoulder",
+      "J_Bip_R_UpperArm",
+      "J_Bip_R_LowerArm",
+      "J_Bip_R_Hand",
+    ]);
     gltf.animations.forEach((clip) => {
       if (!knownClipNames.has(clip.name)) {
-        const action = mixer.clipAction(clip);
+        const filteredTracks = clip.tracks.filter(
+          (track) => !strippedBones.has(track.name.split(".")[0])
+        );
+        const filteredClip = new THREE.AnimationClip(
+          clip.name + "_noHead",
+          clip.duration,
+          filteredTracks
+        );
+        const action = mixer.clipAction(filteredClip);
         action.setLoop(THREE.LoopRepeat, Infinity);
         action.play();
       }

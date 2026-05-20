@@ -60,9 +60,11 @@ export function setCharTimeline(
       screenLight = object;
     }
   });
-  // Try old rig (spine005), fall back to RPM/Avaturn rig (Neck) if present.
+  // Try old rig (spine005), fall back to VRoid / RPM-Avaturn / Mixamo rigs.
   let neckBone =
     character?.getObjectByName("spine005") ||
+    character?.getObjectByName("J_Bip_C_Neck") ||
+    character?.getObjectByName("mixamorig:Neck") ||
     character?.getObjectByName("Neck");
   if (window.innerWidth > 1024) {
     if (character) {

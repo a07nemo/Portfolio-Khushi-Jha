@@ -19,7 +19,7 @@ const Scene = () => {
   const sceneRef = useRef(new THREE.Scene());
   const { setLoading } = useLoading();
 
-  const [character, setChar] = useState<THREE.Object3D | null>(null);
+  const [, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
     if (canvasDiv.current) {
       let rect = canvasDiv.current.getBoundingClientRect();
@@ -44,8 +44,13 @@ const Scene = () => {
       camera.updateProjectionMatrix();
 
       let headBone: THREE.Object3D | null = null;
+      let lUpperArm: THREE.Object3D | null = null;
+      let rUpperArm: THREE.Object3D | null = null;
+      const L_ARM_BASE = -1.3;
+      const R_ARM_BASE = 1.3;
       let screenLight: any | null = null;
       let mixer: THREE.AnimationMixer;
+      let loadedCharacter: THREE.Object3D | null = null;
 
       const clock = new THREE.Clock();
 
@@ -54,27 +59,35 @@ const Scene = () => {
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
       loadCharacter().then((gltf) => {
+        if (disposed) return;
         if (gltf) {
           const animations = setAnimations(gltf);
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
           mixer = animations.mixer;
-          let character = gltf.scene;
-          setChar(character);
-          scene.add(character);
+          loadedCharacter = gltf.scene;
+          setChar(loadedCharacter);
+          scene.add(loadedCharacter);
+
+          // T-pose → arms-down. Idle clip's arm tracks are stripped in
+          // animationUtils; procedural sway is added in the animate loop.
+          lUpperArm = loadedCharacter.getObjectByName("J_Bip_L_UpperArm");
+          rUpperArm = loadedCharacter.getObjectByName("J_Bip_R_UpperArm");
+          if (lUpperArm) lUpperArm.rotation.z = L_ARM_BASE;
+          if (rUpperArm) rUpperArm.rotation.z = R_ARM_BASE;
+
           headBone =
-            character.getObjectByName("spine006") ||
-            character.getObjectByName("Head") ||
+            loadedCharacter.getObjectByName("spine006") ||
+            loadedCharacter.getObjectByName("mixamorig:Head") ||
+            loadedCharacter.getObjectByName("J_Bip_C_Head") ||
+            loadedCharacter.getObjectByName("Head") ||
             null;
-          screenLight = character.getObjectByName("screenlight") || null;
+          screenLight = loadedCharacter.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();
             }, 2500);
           });
-          window.addEventListener("resize", () =>
-            handleResize(renderer, camera, canvasDiv, character)
-          );
         }
       });
 
@@ -101,16 +114,24 @@ const Scene = () => {
         });
       };
 
-      document.addEventListener("mousemove", (event) => {
-        onMouseMove(event);
-      });
+      document.addEventListener("mousemove", onMouseMove);
       const landingDiv = document.getElementById("landingDiv");
       if (landingDiv) {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+      let rafId = 0;
+      let disposed = false;
       const animate = () => {
-        requestAnimationFrame(animate);
+        if (disposed) return;
+        rafId = requestAnimationFrame(animate);
+        const delta = clock.getDelta();
+        if (mixer) {
+          mixer.update(delta);
+        }
+        const t = clock.elapsedTime;
+        if (lUpperArm) lUpperArm.rotation.z = L_ARM_BASE + Math.sin(t * 0.9) * 0.04;
+        if (rUpperArm) rUpperArm.rotation.z = R_ARM_BASE + Math.sin(t * 0.9 + Math.PI) * 0.04;
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -122,25 +143,25 @@ const Scene = () => {
           );
           light.setPointLight(screenLight);
         }
-        const delta = clock.getDelta();
-        if (mixer) {
-          mixer.update(delta);
-        }
         renderer.render(scene, camera);
       };
       animate();
+      const onResize = () =>
+        loadedCharacter &&
+        handleResize(renderer, camera, canvasDiv, loadedCharacter);
+      window.addEventListener("resize", onResize);
       return () => {
+        disposed = true;
+        cancelAnimationFrame(rafId);
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
-        window.removeEventListener("resize", () =>
-          handleResize(renderer, camera, canvasDiv, character!)
-        );
-        if (canvasDiv.current) {
+        window.removeEventListener("resize", onResize);
+        document.removeEventListener("mousemove", onMouseMove);
+        if (canvasDiv.current && renderer.domElement.parentNode === canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
         }
         if (landingDiv) {
-          document.removeEventListener("mousemove", onMouseMove);
           landingDiv.removeEventListener("touchstart", onTouchStart);
           landingDiv.removeEventListener("touchend", onTouchEnd);
         }
