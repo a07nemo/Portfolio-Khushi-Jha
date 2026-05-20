@@ -70,8 +70,8 @@ const Scene = () => {
 
           // T-pose → arms-down. Idle clip's arm tracks are stripped in
           // animationUtils; procedural sway is added in the animate loop.
-          lUpperArm = loadedCharacter.getObjectByName("J_Bip_L_UpperArm");
-          rUpperArm = loadedCharacter.getObjectByName("J_Bip_R_UpperArm");
+          lUpperArm = loadedCharacter.getObjectByName("J_Bip_L_UpperArm") ?? null;
+          rUpperArm = loadedCharacter.getObjectByName("J_Bip_R_UpperArm") ?? null;
           if (lUpperArm) lUpperArm.rotation.z = L_ARM_BASE;
           if (rUpperArm) rUpperArm.rotation.z = R_ARM_BASE;
 
