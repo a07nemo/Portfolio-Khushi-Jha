@@ -11,7 +11,6 @@ import {
   handleTouchMove,
 } from "./utils/mouseUtils";
 import setAnimations from "./utils/animationUtils";
-import { setProgress } from "../Loading";
 
 const Scene = () => {
   const canvasDiv = useRef<HTMLDivElement | null>(null);
@@ -55,10 +54,9 @@ const Scene = () => {
       const clock = new THREE.Clock();
 
       const light = setLighting(scene);
-      let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
-      loadCharacter().then((gltf) => {
+      loadCharacter((pct) => setLoading(pct)).then((gltf) => {
         if (disposed) return;
         if (gltf) {
           const animations = setAnimations(gltf);
@@ -82,12 +80,13 @@ const Scene = () => {
             loadedCharacter.getObjectByName("Head") ||
             null;
           screenLight = loadedCharacter.getObjectByName("screenlight") || null;
-          progress.loaded().then(() => {
-            setTimeout(() => {
-              light.turnOnLights();
-              animations.startIntro();
-            }, 2500);
-          });
+          // 2500ms covers the Loading overlay's dismiss animation
+          // (600ms + 1000ms + 900ms in Loading.tsx) before lights/intro fire.
+          setTimeout(() => {
+            if (disposed) return;
+            light.turnOnLights();
+            animations.startIntro();
+          }, 2500);
         }
       });
 

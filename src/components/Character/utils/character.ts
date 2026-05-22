@@ -12,9 +12,10 @@ const setCharacter = (
   dracoLoader.setDecoderPath("/draco/");
   loader.setDRACOLoader(dracoLoader);
 
-  const loadCharacter = () => {
+  const loadCharacter = (onProgress?: (percent: number) => void) => {
     return new Promise<GLTF | null>((resolve, reject) => {
       let character: THREE.Object3D;
+      let lastReported = -1;
       loader.load(
         "/models/character.glb",
         async (gltf) => {
@@ -36,13 +37,23 @@ const setCharacter = (
           character.position.y = 11;
           character.rotation.y = Math.PI;
 
+          onProgress?.(100);
           resolve(gltf);
           setCharTimeline(character, camera);
           setAllTimeline();
 
           dracoLoader.dispose();
         },
-        undefined,
+        (xhr) => {
+          // Reserve last 5% for post-download parse + shader compile.
+          if (onProgress && xhr.lengthComputable && xhr.total) {
+            const pct = Math.min(95, Math.round((xhr.loaded / xhr.total) * 95));
+            if (pct !== lastReported) {
+              lastReported = pct;
+              onProgress(pct);
+            }
+          }
+        },
         (error) => {
           console.error("Error loading GLTF model:", error);
           reject(error);
