@@ -6,13 +6,14 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am a proactive Computer Science undergraduate at NIIT University with
-          hands-on experience in AI-driven marketing workflows, outreach campaigns,
-          and cross-functional team leadership. Currently an AI Automation Enabler
-          Intern at GroMo, I design workflows across marketing and user-engagement,
-          build AI voice agents, and ship automations that reduce manual work. I
-          enjoy structured problem-solving, stakeholder collaboration, and driving
-          measurable business impact — from product strategy to execution.
+          Product professional working across growth, analytics and AI
+          automation, who builds the systems she runs. At FlixStock, I lead the
+          Zalando 3D shoe digitization project, where self-built automation and
+          dashboards scaled scanning throughput 2.5x. Previously at GroMo, I
+          shipped production AI voice agents and LLM workflows and ran A/B
+          experiments that lifted conversion from 6% to 19%. Comfortable owning
+          work from scoping to delivery, across clients, partners and
+          engineering.
         </p>
       </div>
     </div>

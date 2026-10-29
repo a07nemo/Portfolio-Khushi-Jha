@@ -25,9 +25,10 @@ const Contact = () => {
                 +91 76690 03987
               </a>
             </p>
+            <p>Gurugram, Haryana</p>
             <h4>Education</h4>
             <p>
-              B.Tech Computer Science, NIIT University — Expected Aug 2026
+              B.Tech Computer Science, NIIT University — 2022 – 2026
             </p>
             <p>
               Blue Bells Model School — Graduated 2022
@@ -36,11 +37,27 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Highlights</h4>
             <a
+              href="https://github.com/a07nemo"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              GitHub <MdArrowOutward />
+            </a>
+            <a
               href="#about"
               data-cursor="disable"
               className="contact-social"
             >
-              AI Automation Intern · GroMo <MdArrowOutward />
+              Project Coordinator · FlixStock <MdArrowOutward />
+            </a>
+            <a
+              href="#about"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              AI Automation &amp; Product Intern · GroMo <MdArrowOutward />
             </a>
             <a
               href="#about"

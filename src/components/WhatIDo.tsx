@@ -87,22 +87,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>AI & AUTOMATION</h3>
-              <h4>Workflow Intelligence for Marketing & Ops</h4>
+              <h3>PRODUCT & GROWTH</h3>
+              <h4>Analytics, Experiments & Delivery</h4>
               <p>
-                Designing AI-powered workflows across marketing and user-engagement
-                — from voice agents and email auto-responders to document
-                verification pipelines that run round the clock.
+                Owning work from scoping to delivery — writing PRDs, running A/B
+                experiments, debugging funnels from data, and coordinating
+                clients, partners and engineering to ship measurable outcomes.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">n8n</div>
-                <div className="what-tags">Zapier</div>
-                <div className="what-tags">GPT-4o</div>
-                <div className="what-tags">Langchain</div>
-                <div className="what-tags">Bolna / Retell</div>
-                <div className="what-tags">Twilio Autopilot</div>
-                <div className="what-tags">Hubspot Workflows</div>
+                <div className="what-tags">PRDs & user stories</div>
+                <div className="what-tags">A/B testing</div>
+                <div className="what-tags">Funnel analysis</div>
+                <div className="what-tags">SQL</div>
+                <div className="what-tags">Excel & Sheets</div>
+                <div className="what-tags">JIRA / Asana</div>
+                <div className="what-tags">Client & partner mgmt</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -126,22 +126,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>TECH &amp; SECURITY</h3>
-              <h4>Full-Stack + Cybersecurity Foundations</h4>
+              <h3>AI &amp; AUTOMATION</h3>
+              <h4>Agents, LLM Workflows & Full-Stack</h4>
               <p>
-                Computer Science background with hands-on experience across
-                full-stack development, databases, networking, and security tooling
-                — from building dashboards on GCP to SDN research on DDoS defense.
+                Building production AI voice agents, LLM workflows and AI agent
+                products hands-on — backed by a Computer Science foundation in
+                full-stack development, cloud and security.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Python</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">C++</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">MySQL</div>
-                <div className="what-tags">Nmap &amp; OWASP ZAP</div>
-                <div className="what-tags">Splunk &amp; Metasploit</div>
+                <div className="what-tags">n8n / Zapier / Make</div>
+                <div className="what-tags">GPT-4o, Claude &amp; Gemini</div>
+                <div className="what-tags">RAG &amp; LangChain</div>
+                <div className="what-tags">Bolna / Retell / Twilio</div>
+                <div className="what-tags">Apps Script &amp; Zoho Flow</div>
+                <div className="what-tags">Python, React &amp; Node</div>
+                <div className="what-tags">Supabase &amp; GCP</div>
               </div>
               <div className="what-arrow"></div>
             </div>
