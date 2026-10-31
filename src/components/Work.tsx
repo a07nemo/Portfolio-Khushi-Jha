@@ -9,7 +9,7 @@ const projects = [
     category: "Solo Build · 2026",
     tools:
       "AI agent back office for creators: scheduling, brand deal negotiation, invoicing, fan relationships. Claude, Antigravity, Supabase",
-    image: "/images/placeholder.webp",
+    image: "/images/halo.png",
     link: "#",
   },
   {
