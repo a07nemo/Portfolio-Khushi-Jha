@@ -73,13 +73,6 @@ const Contact = () => {
             >
               Teaching Assistant · COEET NIIT <MdArrowOutward />
             </a>
-            <a
-              href="#about"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Trained Classical & Contemporary Dancer <MdArrowOutward />
-            </a>
           </div>
           <div className="contact-box">
             <h2>
