@@ -5,30 +5,46 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "GP Query Auto-Responder",
-    category: "AI Email Automation · GroMo",
-    tools: "n8n, Zoho Desk, GPT-4o, GroMo Internal API",
+    title: "Halo, AI Creator Manager",
+    category: "Solo Build · 2026",
+    tools:
+      "AI agent back office for creators: scheduling, brand deal negotiation, invoicing, fan relationships. Claude, Antigravity, Supabase",
+    image: "/images/halo.png",
+    link: "#",
+  },
+  {
+    title: "Zalando 3D Ops Automation",
+    category: "Triage Automation & Live Dashboard · FlixStock",
+    tools:
+      "Google Apps Script, Google Sheets, Cursor, Claude. 2.5x scanning throughput",
+    image: "/images/flixstock-dashboard.png",
+    link: "#",
+  },
+  {
+    title: "LLM Query Responder",
+    category: "AI Service Desk Automation · GroMo",
+    tools: "n8n, Zoho Desk, GPT-4o, GroMo Internal API. 45% faster first response",
     image: "/images/gp-query-auto-responder.png",
     link: "#",
   },
   {
-    title: "AI Document Verification",
-    category: "L1 Audit Automation · GroMo",
+    title: "KYC Document Verification",
+    category: "24/7 Production Automation · GroMo",
     tools: "OpenAI Assistant API, Zoho Flow, Kotak 811 / Upstox / Tide",
     image: "/images/document-verification.png",
     link: "#",
   },
   {
     title: "Cloud Threat Intelligence Dashboard",
-    category: "Capstone Project",
+    category: "Capstone Project · 2025",
     tools: "React.js, Node.js, GCP, VirusTotal, Shodan, OTX APIs",
     image: "/images/placeholder.webp",
     link: "#",
   },
   {
     title: "DAISY Research",
-    category: "SDN Load Balancing under DDoS",
-    tools: "Mininet, SDN, AI-driven Detection, Network Simulation",
+    category: "ML-Based DDoS Detection in SDN",
+    tools: "PyTorch, pandas, NumPy, Mininet, SDN",
     image: "/images/placeholder.webp",
     link: "#",
   },

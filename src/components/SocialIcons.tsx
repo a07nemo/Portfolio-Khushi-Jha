@@ -1,5 +1,6 @@
 import {
   FaEnvelope,
+  FaGithub,
   FaLinkedinIn,
   FaPhone,
 } from "react-icons/fa6";
@@ -70,6 +71,15 @@ const SocialIcons = () => {
             href="tel:+917669003987"
           >
             <FaPhone />
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://github.com/a07nemo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
           </a>
         </span>
         <span>

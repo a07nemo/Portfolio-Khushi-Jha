@@ -15,19 +15,38 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>AI Automation Enabler Intern</h4>
-                <h5>GroMo</h5>
+                <h4>Project Coordinator, AI &amp; 3D Imaging</h4>
+                <h5>FlixStock</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Designing and deploying AI-powered workflows across marketing and
-              user-engagement — reducing manual intervention by 20% and accelerating
-              campaign execution. Built AI voice agents for outbound calls (10%
-              higher engagement), a GP Query Auto-Responder on n8n integrating Zoho
-              Desk with GPT-4o, and an AI document verification pipeline using
-              OpenAI's Assistant API and Zoho Flow for round-the-clock L1 audit of
-              partner claim documents (Kotak 811, Upstox Demat, Tide).
+              Jul 2026 – Present. Lead the 3D shoe digitization project for
+              Zalando end to end, from inbound through triage, scanning, delivery
+              and outbound, scaling throughput 2.5x (~50 → ~125 shoes/day).
+              Automated scannable vs non-scannable triage with Google Apps Script
+              and Sheets, built a live operations dashboard for scanner partner
+              DeepAR, and act as primary point of contact for both Zalando and
+              DeepAR while owning QC, reshoots and rejections across the pipeline.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>AI Automation &amp; Product Intern</h4>
+                <h5>GroMo</h5>
+              </div>
+              <h3>2025–26</h3>
+            </div>
+            <p>
+              Jul 2025 – Jun 2026. Ran A/B experiments on the voice-agent funnel
+              against a no-call control group, lifting activation from 6% to 19%,
+              and debugged drop-off with SQL and event logs. Built real-time AI
+              voice and IVR agents, an LLM query responder (n8n + GPT-4o + Zoho
+              Desk) that cut first-level response time by 45%, and shipped KYC
+              document verification (OpenAI Assistant API + Zoho Flow) to 24/7
+              production. Wrote the PRD for an in-app welcome-call agent and built
+              OTIS, an internal tracking tool, cutting manual effort by 20%.
             </p>
           </div>
           <div className="career-info-box">
@@ -70,10 +89,10 @@ const Career = () => {
               <h3>2022–26</h3>
             </div>
             <p>
-              Expected graduation August 2026. Coursework and projects spanning
-              cloud-based threat intelligence, SDN-based load balancing under DDoS
-              attacks (DAISY research), and digital image processing in medical
-              imaging with AI-based segmentation.
+              Coursework in Agile and Scrum project management, data structures
+              and algorithms, computer networks and cybersecurity, with projects
+              spanning cloud-based threat intelligence, ML-based DDoS detection
+              (DAISY research), and medical image processing.
             </p>
           </div>
         </div>
