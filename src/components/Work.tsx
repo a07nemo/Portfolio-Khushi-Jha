@@ -17,7 +17,7 @@ const projects = [
     category: "Triage Automation & Live Dashboard · FlixStock",
     tools:
       "Google Apps Script, Google Sheets, Cursor, Claude. 2.5x scanning throughput",
-    image: "/images/placeholder.webp",
+    image: "/images/flixstock-dashboard.png",
     link: "#",
   },
   {
